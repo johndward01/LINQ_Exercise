@@ -56,7 +56,7 @@ namespace LINQ_Exercise_01_Answers
 
             #region Linq Methods to choose from           
 
-            //*BONUS*: Use Linq method not in list for an extra challenge. Do your own research!          
+            //*BONUS*: Use any of the LINQ methods not in list for an extra challenge. Do your own research!          
 
             //Where() - Filters a sequence of values based on a predicate.
             //Select() - Projects each element of a sequence into a new form.
