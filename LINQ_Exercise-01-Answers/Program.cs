@@ -33,8 +33,18 @@ namespace LINQ_Exercise_01_Answers
                 { 9, "yz_" },
                 { 10, "111" }
             };
-            // TODO: Using the dictionary above remove the entry with all number 1's and print the contents to the console
-            dictionary.Where(kvp => kvp.Value.Contains("1"))
+            // TODO: Using the dictionary above remove the entries that contains numbers or an underscore and print the contents to the console
+            dictionary.Where(kvp => !kvp.Value.Contains("1")
+                                 && !kvp.Value.Contains("2") 
+                                 && !kvp.Value.Contains("3") 
+                                 && !kvp.Value.Contains("4") 
+                                 && !kvp.Value.Contains("5") 
+                                 && !kvp.Value.Contains("6") 
+                                 && !kvp.Value.Contains("7") 
+                                 && !kvp.Value.Contains("8") 
+                                 && !kvp.Value.Contains("9") 
+                                 && !kvp.Value.Contains("0") 
+                                 && !kvp.Value.Contains("_"))
                 .ToList()
                 .ForEach(x => Console.WriteLine($"Key: {x.Key}\tValue: {x.Value}"));
             
