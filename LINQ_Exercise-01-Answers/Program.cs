@@ -33,7 +33,7 @@ namespace LINQ_Exercise_01_Answers
                 { 9, "yz_" },
                 { 10, "111" }
             };
-            // TODO: Using the dictionary above remove the entry with all number 1's
+            // TODO: Using the dictionary above remove the entry with all number 1's and print the contents to the console
             dictionary.Where(kvp => kvp.Value.Contains("1"))
                 .ToList()
                 .ForEach(x => Console.WriteLine($"Key: {x.Key}\tValue: {x.Value}"));
