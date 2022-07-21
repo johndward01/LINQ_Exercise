@@ -8,51 +8,6 @@ namespace LINQ_Exercise_01_Answers
     {
         static void Main(string[] args)
         {
-            //****Collab with classmates***** 
-
-            //TODO: Look up new data structure  (each person in your group should try to use a different type) 
-            //TODO: Instantiate an object of that type
-            //TODO: Insert at least 10 entries into data structure (object)          
-            //TODO: Put yourselves in the shoes of a teacher, create a LINQ situation/question and use one of the LINQ methods below to solve your own question
-            //Example: Using the dictionary below, filter out all of the entries with vowels
-            //Hint: Try creating queries (questions) that pertain to the data structure of your choosing
-            //BONUS: Try using a LINQ method not in the list below for extra practice! 
-
-
-            //Example data structure: 
-            var dictionary = new Dictionary<int, string>
-            {
-                { 1, "abc" },
-                { 2, "def" },
-                { 3, "ghi" },
-                { 4, "jkl" },
-                { 5, "mno" },
-                { 6, "pqr" },
-                { 7, "stu" },
-                { 8, "vwx" },
-                { 9, "yz_" },
-                { 10, "111" }
-            };
-            // TODO: Using the dictionary above remove the entries that contains numbers or an underscore and print the contents to the console
-            dictionary.Where(kvp => !kvp.Value.Contains("1")
-                                 && !kvp.Value.Contains("2") 
-                                 && !kvp.Value.Contains("3") 
-                                 && !kvp.Value.Contains("4") 
-                                 && !kvp.Value.Contains("5") 
-                                 && !kvp.Value.Contains("6") 
-                                 && !kvp.Value.Contains("7") 
-                                 && !kvp.Value.Contains("8") 
-                                 && !kvp.Value.Contains("9") 
-                                 && !kvp.Value.Contains("0") 
-                                 && !kvp.Value.Contains("_"))
-                .ToList()
-                .ForEach(x => Console.WriteLine($"Key: {x.Key}\tValue: {x.Value}"));
-            
-
-            
-
-
-
 
             #region Linq Methods to choose from           
 
@@ -72,6 +27,45 @@ namespace LINQ_Exercise_01_Answers
             //ThenBy() - Performs a subsequent ordering of the elements in a sequence in ascending order.
 
             #endregion
+
+            var dictionary = new Dictionary<int, string>
+            {
+                { 1, "abc" },
+                { 2, "def" },
+                { 3, "ghi" },
+                { 4, "jkl" },
+                { 5, "mno" },
+                { 6, "pqr" },
+                { 7, "stu" },
+                { 8, "vwx" },
+                { 9, "yz_" },
+                { 10, "111" }
+            };
+
+
+            // TODO: Using the dictionary above remove the entries that contains numbers or an underscore and print the contents to the console
+            dictionary.Where(kvp => !kvp.Value.Contains("1")
+                                 && !kvp.Value.Contains("2") 
+                                 && !kvp.Value.Contains("3") 
+                                 && !kvp.Value.Contains("4") 
+                                 && !kvp.Value.Contains("5") 
+                                 && !kvp.Value.Contains("6") 
+                                 && !kvp.Value.Contains("7") 
+                                 && !kvp.Value.Contains("8") 
+                                 && !kvp.Value.Contains("9") 
+                                 && !kvp.Value.Contains("0") 
+                                 && !kvp.Value.Contains("_"))
+                     .ToList()
+                     .ForEach(x => Console.WriteLine($"Key: {x.Key}\tValue: {x.Value}"));
+
+
+            //TODO: Using the dictionaryOfStrings above, filter out all of the entries with vowels
+            //      and print the contents to the console (using a LINQ 1-Liner)
+
+
+
+
+
         }
     }
 }
