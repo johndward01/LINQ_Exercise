@@ -28,7 +28,7 @@ namespace LINQ_Exercise_01_Answers
 
             #endregion
 
-            var dictionary = new Dictionary<int, string>
+            Dictionary<int, string> dictionaryOfStrings = new Dictionary<int, string>
             {
                 { 1, "abc" },
                 { 2, "def" },
@@ -42,27 +42,23 @@ namespace LINQ_Exercise_01_Answers
                 { 10, "111" }
             };
 
-
-            // TODO: Using the dictionary above remove the entries that contains numbers or an underscore and print the contents to the console
-            dictionary.Where(kvp => !kvp.Value.Contains("1")
-                                 && !kvp.Value.Contains("2") 
-                                 && !kvp.Value.Contains("3") 
-                                 && !kvp.Value.Contains("4") 
-                                 && !kvp.Value.Contains("5") 
-                                 && !kvp.Value.Contains("6") 
-                                 && !kvp.Value.Contains("7") 
-                                 && !kvp.Value.Contains("8") 
-                                 && !kvp.Value.Contains("9") 
-                                 && !kvp.Value.Contains("0") 
-                                 && !kvp.Value.Contains("_"))
-                     .ToList()
-                     .ForEach(x => Console.WriteLine($"Key: {x.Key}\tValue: {x.Value}"));
+            // TODO: Using the dictionaryOfStrings above, remove the entries that contain numbers or an underscore
+            // and print the contents to the console (using a LINQ 1-Liner)
 
 
-            //TODO: Using the dictionaryOfStrings above, filter out all of the entries with vowels
+
+            // TODO: Using the dictionaryOfStrings above, filter out all of the entries with vowels
+            // and print the contents to the console (using a LINQ 1-Liner)
+
+
+            IEnumerable<int> collectionOfNumbers = new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+
+            //TODO: Using the collectionOfNumbers above, transform each number into its squared form (Hint: Select())
             //      and print the contents to the console (using a LINQ 1-Liner)
 
 
+            //TODO: Using the collectionOfNumbers above, filter for only the numbers that are evenly divisible by 3
+            //      and print the contents to the console (using a LINQ 1-Liner)
 
 
 
